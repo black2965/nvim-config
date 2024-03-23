@@ -37,5 +37,5 @@ else
         command = [[setlocal fo-=ro]],
     })
 
-    require("colors.sonokai")
+    require("colors.darcula")
 end

@@ -57,7 +57,7 @@ o.smartcase = true
 
 -- Diagnostic
 vim.diagnostic.config({
-  virtual_text = false,
+    virtual_text = false,
 })
 
 -- Folding

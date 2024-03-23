@@ -6,11 +6,12 @@ return {
         lazy = true,
     },
     {
-        "takac/vim-hardtime",
-        config = function()
-            vim.cmd("HardTimeOn")
-        end,
+        "github/copilot.vim",
         lazy = true,
+        config = function()
+            require("configs.copilot")
+        end,
+        cmd = "Copilot",
     },
 
     --ColorScheme
@@ -64,13 +65,12 @@ return {
         dependencies = {
             "nvim-tree/nvim-web-devicons",
         },
-        init = function()
-            vim.g.barbar_auto_setup = true
-        end,
         config = function()
+            vim.g.barbar_auto_setup = true
             require("ui.barbar")
         end,
-        --lazy = true,
+        --event = "CursorMoved",
+        lazy = true,
     },
     {
         "petertriho/nvim-scrollbar",
@@ -270,7 +270,6 @@ return {
     },
     {
         "L3MON4D3/LuaSnip",
-        tag = "v<CurrentMajor>.*",
         event = "InsertEnter",
     },
     {
